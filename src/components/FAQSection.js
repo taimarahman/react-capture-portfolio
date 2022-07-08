@@ -1,8 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+import { About } from "../styles";
 
 const FAQSection = () => {
   return (
-    <div className="faq">
+    <FAQ>
       <h2>
         Any question <span>FAQ</span>
       </h2>
@@ -15,6 +17,7 @@ const FAQSection = () => {
             adipisci!
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h4>Daily Schedule</h4>
@@ -25,6 +28,7 @@ const FAQSection = () => {
             adipisci!
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h4>Different Payment methods</h4>
@@ -35,6 +39,7 @@ const FAQSection = () => {
             adipisci!
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h4>What products o you offer</h4>
@@ -45,9 +50,42 @@ const FAQSection = () => {
             adipisci!
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
-    </div>
+    </FAQ>
   );
 };
 
+const FAQ = styled(About)`
+  display: block;
+
+  span {
+    display: block;
+  }
+
+  h2 {
+    font-weight: lighter;
+    padding-bottom: 2rem;
+  }
+
+  .faq-line {
+    background-color: #ccc;
+    height: 0.2rem;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .question {
+    padding: 3rem 0;
+    cursor: pointer;
+  }
+
+  .answer {
+    padding: 2rem 0;
+
+    p {
+      padding: 1rem 0;
+    }
+  }
+`;
 export default FAQSection;
