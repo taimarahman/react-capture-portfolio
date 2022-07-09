@@ -8,6 +8,7 @@ import {
 } from "../styles";
 import { useLocation } from "react-router-dom";
 import { MovieState } from "../movieState";
+import { pageAnimation } from "../animation.js";
 
 const MovieDetails = () => {
   //   const navigate = useNavigate();
@@ -26,7 +27,12 @@ const MovieDetails = () => {
   return (
     <>
       {movie && (
-        <Details>
+        <Details
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt={movie.title} />

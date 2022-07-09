@@ -7,9 +7,16 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }    
 
+    html {
+        @media screen and (max-width: 1700px) {
+            font-size: 75%;
+        }
+    }
+
     body {
         background-color: #1b1b1b;
         font-family: 'Inter', 'sans-serif';
+        overflow-x: hidden;
     }
 
     button {
@@ -31,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
     h2 {
         font-weight: lighter;
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     h3 {
